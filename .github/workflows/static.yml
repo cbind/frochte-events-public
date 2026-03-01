@@ -38,6 +38,10 @@ jobs:
         with:
           # Upload entire repository
           path: '.'
+      - name: List deployed files
+        run: |
+          echo "Listing all files to be deployed:"
+          find ./ -type f
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
