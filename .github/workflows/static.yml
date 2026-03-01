@@ -37,11 +37,11 @@ jobs:
         uses: actions/upload-pages-artifact@v3
         with:
           # Upload entire repository
-          path: '.'
+          path: './public'
       - name: List deployed files
         run: |
           echo "Listing all files to be deployed:"
-          find ./ -type f
+          find ./public -type f
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
